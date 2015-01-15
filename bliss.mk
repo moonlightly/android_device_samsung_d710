@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+# Specify phone tech before including full_phone
+$(call inherit-product, vendor/bliss/config/common.mk)
+
 # Release name
 PRODUCT_RELEASE_NAME := SPH-D710
 
@@ -22,14 +25,14 @@ TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/d710/full_d710.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := d710
-PRODUCT_NAME := cm_d710
+PRODUCT_NAME := bliss_d710
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SPH-D710 
 
